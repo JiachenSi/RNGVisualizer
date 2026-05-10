@@ -2,7 +2,7 @@
 #include <raylib.h>
 #include <imgui.h>
 #include <rlImGui.h>
-#include "gameMain.h"
+#include "rngMain.h"
 
 void SetupImGuiStyle()
 {

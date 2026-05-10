@@ -20,7 +20,7 @@ endif()
 
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build Raylib as static libraries" FORCE)
 
-project(TerrariaGameCpp)
+project(RNGVisualizer)
 
 add_subdirectory(thirdparty/raylib-5.5)
 add_subdirectory(thirdparty/imgui-docking)
@@ -50,7 +50,7 @@ else()
 
 endif()
 
-target_sources("${CMAKE_PROJECT_NAME}" PRIVATE ${MY_SOURCES} )
+target_sources("${CMAKE_PROJECT_NAME}" PRIVATE ${MY_SOURCES}  "src/game/map.h")
 
 
 if(MSVC) # If using the VS compiler...

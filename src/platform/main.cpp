@@ -4,7 +4,7 @@
 #include <imgui.h>
 #include <rlImGui.h>
 #include "../../include/imGuiTheme.h"
-#include <gameMain.h>
+#include <rngMain.h>
 
 using namespace std;
 
@@ -15,7 +15,7 @@ int main()
 #endif
 	
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE); // Game window can be resized
-	InitWindow(800, 450, "TerrariaGameCpp"); // Size and name of window
+	InitWindow(700, 700, "RNGVisualizer"); // Size and name of window
 	SetExitKey(NULL); // prevents exit by pressing "esc"
 	SetTargetFPS(120);
 
@@ -26,7 +26,7 @@ int main()
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable; // Enable docking
 	#pragma endregion
 
-	if (!initGame()) {
+	if (!initMap()) {
 		return 0;
 	}
 	while (!WindowShouldClose()) {
@@ -43,7 +43,7 @@ int main()
 		ImGui::PopStyleColor(2);
 #pragma endregion
 
-		if(!updateGame()) {
+		if(!drawMap()) {
 			CloseWindow();
 		}
 
@@ -54,6 +54,4 @@ int main()
 		EndDrawing();
 	}
 	CloseWindow();
-
-	closeGame();
 }

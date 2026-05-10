@@ -1,0 +1,3 @@
+bool initMap();
+
+bool drawMap();
