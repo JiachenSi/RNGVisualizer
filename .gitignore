@@ -1,0 +1,8 @@
+# Project
+/out
+/.vs
+CMakeSettings.json
+
+# Game
+settings/
+saves/
